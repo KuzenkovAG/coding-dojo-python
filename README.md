@@ -16,10 +16,14 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ``` 
 
+```sh
+pip freeze > requirements.txt
+```
+
 ## Run tests
 
 ```sh
-pytest
+pytest . -vv
 ```
 
 ## Tips
