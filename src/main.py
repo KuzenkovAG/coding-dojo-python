@@ -1,0 +1,3 @@
+class Calculator(): 
+    def Add(self, val): ...
+
