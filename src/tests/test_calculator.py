@@ -16,3 +16,6 @@ def test_negative():
 
 def test_big_number():
     assert 2 == Calculator().Add("2,1001")
+
+def test_decimeter():
+    assert 2 == Calculator().Add("1\n1")

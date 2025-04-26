@@ -9,5 +9,8 @@ class Calculator():
         for v_ in v:
             if '-' in v_:
                 raise NegativeError
-            res += int(v_)
+            if (v__ := int(v_)) > 1000:
+                continue
+            res += v__
+
         return res
