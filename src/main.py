@@ -1,8 +1,13 @@
+class NegativeError(Exception): ...
 class Calculator(): 
     def Add(self, val):
         if val == "":
             return 0
         
         v = val.split(',')
-
-        return sum(int(v_) for v_ in v)
+        res = 0
+        for v_ in v:
+            if '-' in v_:
+                raise NegativeError
+            res += int(v_)
+        return res
