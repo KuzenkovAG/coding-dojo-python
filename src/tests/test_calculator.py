@@ -21,8 +21,8 @@ from main import RomeNumber
         (900, "CM"),
 
         (2, "II"),
-        (7, "VII")
-        # (390, "CCCXC"),
+        (7, "VII"),
+        (390, "CCCXC"),
     ],
 )
 def test_simple(
