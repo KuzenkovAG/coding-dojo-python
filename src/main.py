@@ -4,6 +4,5 @@ class Calculator():
             return 0
         
         v = val.split(',')
-        return int(v[0])
-    
-        
+
+        return sum(int(v_) for v_ in v)
