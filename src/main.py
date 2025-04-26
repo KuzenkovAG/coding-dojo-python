@@ -14,4 +14,22 @@ class RomeNumber:
         900: "CM",
     }
     def get(self, value):
-        return self.Values[value]
+        if v := self.Values.get(value):
+            return v 
+        
+        digits = []
+        while value > 0:
+            r = value % 10
+            digits.append(r)
+            value = int(value/10)
+
+        for i in range(len(digits)):
+            digits[i] = digits[i] * 10**i
+
+        return digits[0] * self.Values.get(1)
+
+    #     return [self._sum(v_) for v_ in digits.reverse()].join()
+    
+    # def _sum(self, value):
+    #     if 
+
