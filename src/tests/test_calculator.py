@@ -1,24 +1,22 @@
 import pytest
-from main import Calculator, NegativeError
 
-def test_Add():
-    assert 0 == Calculator().Add("")
+from main import RomeNumber
 
-def test_add_number():
-    assert 1 == Calculator().Add("1")
 
-def test_sum_numbers():
-    assert 2 == Calculator().Add("1,1")
-
-def test_negative():
-    with pytest.raises(NegativeError):
-        Calculator().Add("-1")
-
-def test_big_number():
-    assert 2 == Calculator().Add("2,1001")
-
-def test_delimiter():
-    assert 2 == Calculator().Add("1\n1")
-
-def test_delimiter_2():
-    assert 2 == Calculator().Add("1;1")
+@pytest.mark.parametrize(
+    "test_input, "
+    "expected", [
+        (1, "I"),
+        (5, "V"),
+        (10, "X"),
+        (50, "L"),
+        (100, "C"),
+        (500, "D"),
+        (1000, "M"),
+    ],
+)
+def test_simple(
+        test_input,
+        expected,
+):
+    assert expected == RomeNumber().get(test_input)
