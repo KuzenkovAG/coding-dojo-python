@@ -13,6 +13,12 @@ from main import RomeNumber
         (100, "C"),
         (500, "D"),
         (1000, "M"),
+
+        (4, "IV"),
+        (9, "IX"),
+        (90, "XC"),
+        (400, "CD"),
+        (900, "CM"),
     ],
 )
 def test_simple(
