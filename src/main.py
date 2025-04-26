@@ -1,3 +1,4 @@
 class Calculator(): 
-    def Add(self, val): ...
-
+    def Add(self, val):
+        if val == "":
+            return 0
