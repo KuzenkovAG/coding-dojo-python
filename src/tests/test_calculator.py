@@ -17,5 +17,8 @@ def test_negative():
 def test_big_number():
     assert 2 == Calculator().Add("2,1001")
 
-def test_decimeter():
+def test_delimiter():
     assert 2 == Calculator().Add("1\n1")
+
+def test_delimiter_2():
+    assert 2 == Calculator().Add("1;1")

@@ -4,6 +4,7 @@ class Calculator():
         if val == "":
             return 0
         
+        val = val.replace('\n', ',')
         v = val.split(',')
         res = 0
         for v_ in v:
