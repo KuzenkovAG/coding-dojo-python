@@ -3,8 +3,10 @@ class Calculator():
     def Add(self, val):
         if val == "":
             return 0
-        
-        val = val.replace('\n', ',')
+
+        for s in ("\n", ";"):
+            val = val.replace(s, ',')
+
         v = val.split(',')
         res = 0
         for v_ in v:
